@@ -143,7 +143,7 @@
 <pre><code>heroku create sweethandy-prod --remote prod &amp;&amp; \
     heroku addons:create newrelic:wayne --app sweethandy-prod &amp;&amp; \
     heroku addons:create heroku-postgresql:hobby-dev --app sweethandy-prod &amp;&amp; \
-    heroku config:set DJANGO_SECRET=`openssl rand -base64 32` \
+    heroku config:set DJANGO_SECRET_KEY=`openssl rand -base64 32` \
         DJANGO_AWS_ACCESS_KEY_ID=&quot;Add your id&quot; \
         DJANGO_AWS_SECRET_ACCESS_KEY=&quot;Add your key&quot; \
         DJANGO_AWS_STORAGE_BUCKET_NAME=&quot;sweethandy-prod&quot; \
@@ -151,13 +151,13 @@
 </code></pre>
 
 <p>Creating the qa sever:</p>
-<pre><code>heroku create `sweethandy-qa --remote qa &amp;&amp; \
-    heroku addons:create newrelic:wayne &amp;&amp; \
-    heroku addons:create heroku-postgresql:hobby-dev &amp;&amp; \
-    heroku config:set DJANGO_SECRET=`openssl rand -base64 32` \
+<pre><code>heroku create sweethandy-qa --remote prod &amp;&amp; \
+    heroku addons:create heroku-postgresql:hobby-dev --app sweethandy-qa &amp;&amp; \
+    heroku config:set DJANGO_SECRET_KEY=`openssl rand -base64 32` \
         DJANGO_AWS_ACCESS_KEY_ID=&quot;Add your id&quot; \
         DJANGO_AWS_SECRET_ACCESS_KEY=&quot;Add your key&quot; \
         DJANGO_AWS_STORAGE_BUCKET_NAME=&quot;sweethandy-qa&quot; \
+        --app sweethandy-qa
 </code></pre>
 
 <p>Securely add your heroku credentials to travis so it can automatically deploy your changes.</p>
@@ -171,7 +171,11 @@ git checkout -b qa &amp;&amp; \
 git push -u origin qa
 </code></pre>
 
-<p>You're ready to continuously ship! ✨ 💅 🛳</p>
+<p>Create Heroku container</p>
+<pre><code>heroku login
+heroku container:login
+heroku container:release --app sweethandy-qa web
+</code></pre>
               
             </div>
           </div>
@@ -224,5 +228,5 @@ git push -u origin qa
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-01-16 12:11:42
+Build Date UTC : 2020-01-17 10:04:04
 -->
