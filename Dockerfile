@@ -14,4 +14,4 @@ EXPOSE 8000
 # Run the production server
 CMD ./manage.py migrate && \
     ./manage.py collectstatic --noinput && \
-    newrelic-admin run-program gunicorn --bind 0.0.0.0:$PORT --access-logfile - sweethandy.wsgi:application
+    run-program gunicorn --bind 0.0.0.0:$PORT --access-logfile - sweethandy.wsgi:application
