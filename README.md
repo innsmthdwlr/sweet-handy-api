@@ -8,7 +8,7 @@ Diabetes self-management. Check out the project's [documentation](http://innsmth
 
 # Prerequisites
 
-- [Docker](https://docs.docker.com/docker-for-mac/install/)  
+- [Docker](https://docs.docker.com/install/)
 
 # Local Development
 
