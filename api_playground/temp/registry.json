@@ -1,0 +1,83 @@
+{
+  "days": 
+  [
+    {
+      "date": "2019-12-09",
+      "meals": 
+      [
+        {
+          "time": "11:59",
+          "image": "https://www.dropbox.com/s/t5szjmjkfk5lehq/IMG_20191209_115909.png?raw=1",
+          "description": "Glass of water with 1 g vit C, whole-grain bread sandwich with homemade fish paste and cucumber",
+          "noTag": 1,
+          "measurements": 
+          [
+            {
+              "time": "13:00",
+              "value": 134
+            }
+          ]
+        },
+        {
+          "time": "13:34",
+          "image": "https://www.dropbox.com/s/tgub0blfx1ltb19/IMG_20191209_133411.png?raw=1",
+          "description": "Crispbread with youghurt, dill, gouda cheese slice and wiener",
+          "noTag": 1,
+          "measurements": 
+          [
+            {
+              "time": "14:34",
+              "value": 122
+            }
+          ]
+        },
+        {
+          "time": "15:59",
+          "image": "https://www.dropbox.com/s/gnzu88mqhq3mycx/IMG_20191209_155959.png?raw=1",
+          "description": "Strawberry cream cheese with 2 whole-grain crackers",
+          "noTag": 1,
+          "measurements": 
+          [
+            {
+              "time": "17:03",
+              "value": 138
+            }
+          ]
+        },
+        {
+          "time": "17:35",
+          "image": "https://www.dropbox.com/s/w155l4nfht1b1ka/IMG_20191209_173506.png?raw=1",
+          "description": "Whole-grain penne with spinach and salmon",
+          "noTag": 0,
+          "measurements": 
+          [
+            {
+              "time": "18:35",
+              "value": 132
+            }
+          ]
+        },
+        {
+          "time": "20:13",
+          "image": "https://www.dropbox.com/s/gcu7q8os91nq3wx/IMG_20191209_201304.png?raw=1",
+          "description": "Cottage cheese with cinamon and apple. Two homemade, no-sugar whole-grain cookies with chocolate chips and walnuts",
+          "noTag": 0,
+          "measurements": 
+          [
+            {
+              "time": "21:14",
+              "value": 120
+            }
+          ]
+        },
+        {
+          "time": "22:31",
+          "image": "https://www.dropbox.com/s/zxd89ica6kfomh1/IMG_20191209_223105.png?raw=1",
+          "description": "No-sugar bar with nuts and grains",
+          "noTag": 1,
+          "measurements": []
+        }
+      ]
+    }
+  ]
+}
