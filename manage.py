@@ -8,6 +8,9 @@ def main():
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sweethandy.config")
     os.environ.setdefault("DJANGO_CONFIGURATION", "Production")
 
+    if len(os.getenv("DJANGO_CONFIGURATION")) == 0:
+        os.environ["DJANGO_CONFIGURATION"] = "Local"
+
     try:
         from configurations.management import execute_from_command_line
     except ImportError:
