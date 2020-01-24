@@ -6,10 +6,13 @@ from django.views.generic.base import RedirectView
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
 from .users.views import UserViewSet, UserCreateViewSet
+from .meals.views import MealViewSet, MeasurementViewSet
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'users', UserCreateViewSet)
+router.register(r'meals', MealViewSet)
+router.register(r'measurements', MeasurementViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

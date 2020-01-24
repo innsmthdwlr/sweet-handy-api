@@ -1,8 +1,15 @@
 version: '2'
 
+volumes:
+  dbdata:
+    driver: local
+
 services:
   postgres:
     image: postgres:11.6
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
   web:
     restart: always
     environment:
@@ -20,6 +27,7 @@ services:
       - "8000:8000"
     depends_on:
       - postgres
+
   documentation:
     restart: always
     build: ./

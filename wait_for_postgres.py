@@ -33,4 +33,5 @@ def pg_isready(host, user, password, dbname):
     return False
 
 
+print(os.getenv("DJANGO_SECRET_KEY"))
 pg_isready(**config)
